@@ -1,0 +1,8 @@
+@import '../styles/index';
+
+.main {
+  @include breakpoint($tablet) {
+  }
+  @include breakpoint($desktop) {
+  }
+}

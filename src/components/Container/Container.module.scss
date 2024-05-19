@@ -1,0 +1,17 @@
+@import '@/styles/index';
+
+.container {
+  max-width: $mobile;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include breakpoint($tablet) {
+    max-width: $tablet;
+    padding: 0 2rem;
+  }
+
+  @include breakpoint($desktop) {
+    max-width: $desktop;
+    padding: 0 10rem;
+  }
+}

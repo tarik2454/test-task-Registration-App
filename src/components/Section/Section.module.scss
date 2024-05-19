@@ -1,0 +1,12 @@
+@import '@/styles/index';
+
+.section {
+  margin-top: 5rem;
+  @include bordered(red);
+
+  @include breakpoint($tablet) {
+  }
+
+  @include breakpoint($desktop) {
+  }
+}
