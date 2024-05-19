@@ -17,5 +17,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  base: '/vite-project-template/',
+  base: '/test-task-Registration-App/',
 });
