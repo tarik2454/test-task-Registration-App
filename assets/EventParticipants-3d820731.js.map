@@ -1,0 +1,1 @@
+{"version":3,"file":"EventParticipants-3d820731.js","sources":["../../src/pages/EventParticipants/EventParticipants.jsx"],"sourcesContent":["export default function EventParticipants() {\n  return <div>EventParticipants</div>;\n}\n"],"names":["EventParticipants","jsx"],"mappings":"wCAAA,SAAwBA,GAAoB,CACnC,OAAAC,EAAA,IAAC,OAAI,SAAiB,mBAAA,CAAA,CAC/B"}
