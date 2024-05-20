@@ -1,1 +1,0 @@
-{"version":3,"file":"EventRegistration-38da8dec.js","sources":["../../src/pages/EventRegistration/EventRegistration.jsx"],"sourcesContent":["export default function EventRegistration() {\n  return <div>Root</div>;\n}\n"],"names":["EventRegistration","jsx"],"mappings":"wCAAA,SAAwBA,GAAoB,CACnC,OAAAC,EAAA,IAAC,OAAI,SAAI,MAAA,CAAA,CAClB"}
