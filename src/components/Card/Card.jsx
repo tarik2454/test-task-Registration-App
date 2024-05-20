@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import styles from './Card.module.scss';
 import { Link } from 'react-router-dom';
+import styles from './Card.module.scss';
 
 export default function Card({ title, description }) {
   return (
@@ -10,10 +10,10 @@ export default function Card({ title, description }) {
         <p className={styles.card_description}>{description}</p>
       </div>
       <div className={styles.link_wrapper}>
-        <Link className={styles.link_item} href="/event-registration">
+        <Link className={styles.link_item} to="/event-registration">
           Register
         </Link>
-        <Link className={styles.link_item} href="/event-participants">
+        <Link className={styles.link_item} to="/event-participants">
           View
         </Link>
       </div>

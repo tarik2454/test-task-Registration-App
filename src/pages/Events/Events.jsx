@@ -1,14 +1,16 @@
+import cardData from '../../data/card-data';
+
 import Section from '../../components/Section/Section';
 import Container from '../../components/Container/Container';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import CardList from '../../components/CardList/CardList';
+import Pagination from '../../components/Pagination/Pagination';
 
 export default function Events() {
   return (
     <Section>
       <Container>
         <SectionTitle title={'Events'} />
-        <CardList />
+        <Pagination items={cardData} itemsPerPage={12} />
       </Container>
     </Section>
   );

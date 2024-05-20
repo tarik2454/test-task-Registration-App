@@ -16,3 +16,25 @@ body {
   color: $primary-text-color;
   background-color: $primary-bg-color;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  color: $accent-color;
+}
+
+.page-item {
+  &.active {
+    color: $black;
+  }
+}
+
+.page-link {
+  cursor: pointer;
+}
+
+.page-item-next,
+.page-item-previous {
+  fill: $accent-color;
+}
