@@ -4,6 +4,7 @@
   max-width: $mobile;
   margin: 0 auto;
   padding: 0 1rem;
+  @include bordered(red);
 
   @include breakpoint($tablet) {
     max-width: $tablet;

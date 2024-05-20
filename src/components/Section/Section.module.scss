@@ -1,8 +1,8 @@
 @import '@/styles/index';
 
 .section {
-  margin-top: 5rem;
-  @include bordered(red);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
   @include breakpoint($tablet) {
   }

@@ -1,0 +1,25 @@
+@import '@/styles/index';
+
+.card {
+  padding: 2rem;
+  @include bordered($border-color);
+}
+
+.card_title {
+  margin-bottom: 0.8rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.card_content {
+  margin-bottom: 2.8rem;
+}
+
+.link_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link_item {
+  color: $accent-color;
+}
