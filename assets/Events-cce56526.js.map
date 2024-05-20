@@ -1,1 +1,0 @@
-{"version":3,"file":"Events-cce56526.js","sources":["../../src/pages/Events/Events.jsx"],"sourcesContent":["export default function Events() {\n  return <div>Events</div>;\n}\n"],"names":["Events","jsx"],"mappings":"wCAAA,SAAwBA,GAAS,CACxB,OAAAC,EAAA,IAAC,OAAI,SAAM,QAAA,CAAA,CACpB"}
