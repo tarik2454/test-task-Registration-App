@@ -1,10 +1,9 @@
 @import '@/styles/index';
 
-.card_wrapper {
+.participant_wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 4rem;
-  margin-bottom: 6rem;
 
   @include breakpoint($tablet) {
     grid-template-columns: repeat(3, 1fr);

@@ -1,0 +1,11 @@
+@import '@/styles/index';
+
+.participant {
+  padding: 2rem;
+  @include bordered($border-color);
+}
+
+.participant_name {
+  margin-bottom: 0.4rem;
+  font-size: 1.7rem;
+}
