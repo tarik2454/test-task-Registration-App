@@ -1,5 +1,7 @@
 import { useForm } from 'react-hook-form';
 
+import { addParticipants } from '../../apiServices/apiServices';
+
 import styles from './RegistrationForm.module.scss';
 
 export default function RegistrationForm() {
@@ -9,8 +11,13 @@ export default function RegistrationForm() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = data => {
-    console.log(data);
+  const onSubmit = async data => {
+    try {
+      const addedParticipant = await addParticipants(data);
+      console.log('Participant added:', addedParticipant);
+    } catch (error) {
+      console.warn('Error submitting form:', error.message);
+    }
   };
 
   return (

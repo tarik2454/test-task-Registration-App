@@ -8,7 +8,7 @@ export default function ParticipantsList({ currentItems }) {
       {currentItems.map(participant => (
         <Participant
           key={participant.id}
-          name={participant.name}
+          name={participant.fullName}
           email={participant.email}
         />
       ))}
@@ -19,8 +19,8 @@ export default function ParticipantsList({ currentItems }) {
 ParticipantsList.propTypes = {
   currentItems: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      fullName: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
     })
   ).isRequired,
