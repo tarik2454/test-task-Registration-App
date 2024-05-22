@@ -1,8 +1,43 @@
-# React + Vite
+# <div align="center">Registration App</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Visit site
 
-Currently, two official plugins are available:
+👉&nbsp;<a href="https://test-task-registration-b7z23wdjs-tarik2454s-projects.vercel.app/" target="_blank">Click here</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies used
+
+- HTML
+- CSS(SCSS)
+- JavaScript
+- React
+- React-router-dom
+- React-hook-form
+- React-paginate
+- Axios
+- Node.js
+- MongoDB
+
+## Run it locally
+
+clone the repository:
+
+```
+git clone https://github.com/tarik2454/test-task-Registration-App
+```
+
+set up dependencies:
+
+```
+npm install
+```
+
+run the application:
+
+```
+npm start
+```
+
+## My contacts
+
+- **<a href="https://t.me/tarik_2454" target="_blank">Telegram</a>**
+- **<a href="tarik2454@gmail.com" target="_blank">Email</a>**
