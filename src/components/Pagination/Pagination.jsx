@@ -50,7 +50,7 @@ export default function Pagination({ items, itemsPerPage }) {
 Pagination.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      _id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
     })

@@ -7,7 +7,7 @@ export default function ParticipantsList({ currentItems }) {
     <ul className={styles.participant_wrapper}>
       {currentItems.map(participant => (
         <Participant
-          key={participant.id}
+          key={participant._id}
           name={participant.fullName}
           email={participant.email}
         />
@@ -19,7 +19,7 @@ export default function ParticipantsList({ currentItems }) {
 ParticipantsList.propTypes = {
   currentItems: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      _id: PropTypes.string.isRequired,
       fullName: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
     })

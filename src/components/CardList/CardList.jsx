@@ -6,7 +6,11 @@ export default function CardList({ currentItems }) {
   return (
     <ul className={styles.card_wrapper}>
       {currentItems.map(card => (
-        <Card key={card.id} title={card.title} description={card.description} />
+        <Card
+          key={card._id}
+          title={card.title}
+          description={card.description}
+        />
       ))}
     </ul>
   );
@@ -15,7 +19,7 @@ export default function CardList({ currentItems }) {
 CardList.propTypes = {
   currentItems: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      _id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
     })
