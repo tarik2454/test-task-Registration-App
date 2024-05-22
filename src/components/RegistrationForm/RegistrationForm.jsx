@@ -24,8 +24,10 @@ export default function RegistrationForm() {
       data.eventId = eventId;
       await addParticipants(data);
       setIsSuccess(true);
+      setIsError(false);
       reset();
     } catch (error) {
+      setIsSuccess(false);
       setIsError(true);
       console.warn(error.message);
     }
@@ -33,14 +35,16 @@ export default function RegistrationForm() {
 
   return (
     <>
-      {isSuccess && (
-        <p style={{ color: 'green', marginBottom: '10px' }}>
-          Data successfully submitted!
-        </p>
-      )}
-      {isError && (
-        <p style={{ color: 'rgb(216, 47, 47)', marginBottom: '10px' }}>
-          Data submission failed!
+      {(isSuccess || isError) && (
+        <p
+          style={{
+            color: isSuccess ? 'green' : 'rgb(216, 47, 47)',
+            marginBottom: '10px',
+          }}
+        >
+          {isSuccess
+            ? 'Data successfully submitted!'
+            : 'Data submission failed!'}
         </p>
       )}
       <form onSubmit={handleSubmit(onSubmit)}>

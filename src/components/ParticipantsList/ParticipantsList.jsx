@@ -4,15 +4,21 @@ import styles from './ParticipantsList.module.scss';
 
 export default function ParticipantsList({ currentItems }) {
   return (
-    <ul className={styles.participant_wrapper}>
-      {currentItems.map(participant => (
-        <Participant
-          key={participant._id}
-          name={participant.fullName}
-          email={participant.email}
-        />
-      ))}
-    </ul>
+    <div>
+      {currentItems.length === 0 ? (
+        <p>No participants registered for this event yet.</p>
+      ) : (
+        <ul className={styles.participant_wrapper}>
+          {currentItems.map(participant => (
+            <Participant
+              key={participant._id}
+              name={participant.fullName}
+              email={participant.email}
+            />
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
 
