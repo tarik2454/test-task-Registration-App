@@ -18,8 +18,14 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Events />} />
         <Route path="events" element={<Events />} />
-        <Route path="event-registration" element={<EventRegistration />} />
-        <Route path="event-participants" element={<EventParticipants />} />
+        <Route
+          path="event-registration/:eventId"
+          element={<EventRegistration />}
+        />
+        <Route
+          path="event-participants/:eventId"
+          element={<EventParticipants />}
+        />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>

@@ -1,6 +1,9 @@
 @import '@/styles/index';
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 2rem;
   @include bordered($border-color);
 }

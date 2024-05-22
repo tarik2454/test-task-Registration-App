@@ -1,0 +1,43 @@
+@import '@/styles/index';
+
+.loader_wrapper {
+  padding-top: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.loader_title {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  background: #fff;
+  box-shadow: -24px 0 #fff, 24px 0 #fff;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #fff;
+    box-shadow: -24px 0 $accent-color, 24px 0 #fff;
+  }
+  66% {
+    background: $accent-color;
+    box-shadow: -24px 0 #fff, 24px 0 #fff;
+  }
+  100% {
+    background: #fff;
+    box-shadow: -24px 0 #fff, 24px 0 $accent-color;
+  }
+}

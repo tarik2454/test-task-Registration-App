@@ -8,6 +8,7 @@ export default function CardList({ currentItems }) {
       {currentItems.map(card => (
         <Card
           key={card._id}
+          cardId={card._id}
           title={card.title}
           description={card.description}
         />

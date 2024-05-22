@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 import { getParticipants } from '../../apiServices/apiServices';
 
@@ -10,10 +11,14 @@ import ParticipantsList from '../../components/ParticipantsList/ParticipantsList
 export default function EventParticipants() {
   const [participants, setParticipants] = useState([]);
 
+  const params = useParams();
+  const eventId = params.eventId;
+
   useEffect(() => {
     const getData = async () => {
       try {
-        const data = await getParticipants();
+        const data = await getParticipants(eventId);
+        console.log(data);
         setParticipants(data);
       } catch (error) {
         console.warn(error.message);
@@ -21,7 +26,8 @@ export default function EventParticipants() {
     };
 
     getData();
-  });
+  }, [eventId]);
+
   return (
     <Section>
       <Container>

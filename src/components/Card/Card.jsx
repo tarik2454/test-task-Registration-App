@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './Card.module.scss';
 
-export default function Card({ title, description }) {
+export default function Card({ title, description, cardId }) {
   return (
     <div className={styles.card}>
       <div className={styles.card_content}>
@@ -10,10 +10,10 @@ export default function Card({ title, description }) {
         <p className={styles.card_description}>{description}</p>
       </div>
       <div className={styles.link_wrapper}>
-        <Link className={styles.link_item} to="/event-registration">
+        <Link className={styles.link_item} to={`/event-registration/${cardId}`}>
           Register
         </Link>
-        <Link className={styles.link_item} to="/event-participants">
+        <Link className={styles.link_item} to={`/event-participants/${cardId}`}>
           View
         </Link>
       </div>
@@ -22,6 +22,7 @@ export default function Card({ title, description }) {
 }
 
 Card.propTypes = {
+  cardId: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };

@@ -4,6 +4,7 @@ import { addParticipants } from '../../apiServices/apiServices';
 
 import styles from './RegistrationForm.module.scss';
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 export default function RegistrationForm() {
   const [isSuccess, setIsSuccess] = useState(false);
@@ -15,8 +16,12 @@ export default function RegistrationForm() {
     reset,
   } = useForm();
 
+  const params = useParams();
+  const eventId = params.eventId;
+
   const onSubmit = async data => {
     try {
+      data.eventId = eventId;
       await addParticipants(data);
       setIsSuccess(true);
       reset();
