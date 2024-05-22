@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const BASE_URL = axios.create({
-  baseURL: 'http://localhost:3000/api/',
+  baseURL: 'https://backend-test-task-registration-app.onrender.com/api/',
 });
 
 export const getEvents = async () => {
