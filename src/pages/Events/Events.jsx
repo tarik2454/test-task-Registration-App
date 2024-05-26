@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import { getEvents } from '../../apiServices/apiServices';
 
@@ -11,6 +11,7 @@ import Loader from '../../components/Loader/Loader';
 export default function Events() {
   const [events, setEvents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const isFirstLoad = useRef(true);
 
   useEffect(() => {
     const getData = async () => {
@@ -21,10 +22,15 @@ export default function Events() {
         console.warn(error.message);
       } finally {
         setIsLoading(false);
+        isFirstLoad.current = false;
       }
     };
 
-    getData();
+    if (isFirstLoad.current) {
+      getData();
+    } else {
+      setIsLoading(false);
+    }
   }, []);
 
   return (
