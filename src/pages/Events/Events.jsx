@@ -6,9 +6,11 @@ import Section from '../../components/Section/Section';
 import Container from '../../components/Container/Container';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import Pagination from '../../components/Pagination/Pagination';
+import Loader from '../../components/Loader/Loader';
 
 export default function Events() {
   const [events, setEvents] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
@@ -17,6 +19,8 @@ export default function Events() {
         setEvents(data);
       } catch (error) {
         console.warn(error.message);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -27,7 +31,11 @@ export default function Events() {
     <Section>
       <Container>
         <SectionTitle title={'Events'} />
-        <Pagination items={events} itemsPerPage={12} />
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <Pagination items={events} itemsPerPage={12} />
+        )}
       </Container>
     </Section>
   );
