@@ -4,8 +4,6 @@
 
 👉&nbsp;<a href="https://test-task-registration-app.vercel.app/" target="_blank">Click here</a>
 
-There may be delays when loading the site for the first time up to several minutes since free hosting is used which adjusts these restrictions
-
 ## Visit backend repository
 
 👉&nbsp;<a href="https://github.com/tarik2454/backend-test-task-Registration-App" target="_blank">Click here</a>
